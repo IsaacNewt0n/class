@@ -1,1 +1,18 @@
+@import 'reset';
 
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+
+And the corresponding CSS output:
+
+html, body, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
