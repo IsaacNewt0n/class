@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
   <title>A Basic HTML5 Template</title>
   <meta name="description" content="A simple HTML5 Template for new projects.">
   <meta name="author" content="SitePoint">
@@ -19,6 +20,7 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <link rel="stylesheet" href="css/css.css">
 
@@ -174,7 +176,7 @@ body {
 <p>For example, if you need to include the vendor prefixes, you can use a mixin instead. Take a look at this example for border-radius:
 </p>
 <i>
-@mixin border-radius($radius) {
+<p>@mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
@@ -189,11 +191,11 @@ body {
 </p>
 <p><b>The following CSS is produced:</b></p>
 
-<i>.box {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
+<i><p>.box {<p>
+  <p>-webkit-border-radius: 10px;<p>
+  <p>-moz-border-radius: 10px;<p>
+  <p>-ms-border-radius: 10px;<p>
+ <p> border-radius: 10px;<p>
 }
 </i>
 <h1>Extend/Inheritance</h1>
@@ -227,6 +229,23 @@ var imgObj = null;
             window.onload = init;
 
 
+
+
+$(document).ready(function() {
+  $(".zoom-image").hover(
+    function() {
+      
+      $(this).css("transform", "scale(2.2)"); // Scale the img
+    },
+    function() {
+      
+      $(this).css("transform", "scale(1)"); // Scale back
+    }
+  );
+});
+
+
+
 </script>
 
 
@@ -234,7 +253,9 @@ var imgObj = null;
 
 <form action="/action_page.php">
   <label for="fname">First name:</label><br>
+
   <input type="text" id="fname" name="fname" value="Your Name"><br>
+ <p></p>
   <label for="lname">Email:</label><br>
   <input type="text" id="email" name="email" value="You Email"><br><br>
   <input type="submit" value="subscribe">
@@ -248,8 +269,10 @@ var imgObj = null;
          <input type = "button" value = "Click Me" onclick = "moveRight();" />
       </form>  
 
-
-
+<h2> Jquery  Zoom Image</h2>
+<form>
+<img id = "smile" src = "https://th.bing.com/th?id=OIP.HIjGHzSB0wrsXTkP0LUdHwHaGL&w=273&h=228&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" width="100" height="100" class="zoom-image"/>
+  </form>
 
 </body>
 
